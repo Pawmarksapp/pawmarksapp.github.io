@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pawmarks — Privacy Policy</title>
+<style>
+  :root { --bg:#1a1e2e; --fg:#c8cdd8; --accent:#ffb347; --muted:#8f97a8; }
+  @media (prefers-color-scheme: light) { :root { --bg:#fbf8f4; --fg:#2a2420; --accent:#c77d12; --muted:#6b645e; } }
+  body { margin:0; background:var(--bg); color:var(--fg); font:16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 40px 16px 80px; }
+  h1 { color:var(--accent); margin-bottom:4px; } h2 { margin-top:32px; }
+  .meta { color:var(--muted); font-size:14px; }
+  code { background: rgba(127,127,127,.18); padding:1px 5px; border-radius:4px; }
+  a { color: var(--accent); }
+</style>
+</head>
+<body>
+<main>
+  <h1>Pawmarks — Privacy Policy</h1>
+  <p class="meta">Effective: 2026-10-19 · Applies to the Pawmarks browser extension (v3.4 and later)</p>
+
+  <p>Pawmarks is a bookmark and collection manager for image boards. It is built so that <strong>your data stays on your computer</strong>. There are no accounts, no analytics, no ads and no tracking.</p>
+
+  <h2>What Pawmarks stores</h2>
+  <ul>
+    <li>Your bookmarked artists, saved posts, collections, tags and notes.</li>
+    <li>Your settings (look, feed interval, download filters, privacy options).</li>
+    <li>Cached data needed for features you use: the new-upload feed, "viewed" markers, download counters.</li>
+    <li>If you buy Pawmarks Plus: your licence key, its activation id and the last validation result.</li>
+    <li>If you use Rule34: your Rule34 API key and user id, which the extension reads from your own account's options page while you are logged in. They are stored locally and sent only to Rule34's API.</li>
+  </ul>
+  <p>All of this lives in Chrome's extension storage on your device. The optional automatic backup writes the same data to <code>Downloads\Pawmarks\backup.json</code> on your computer so it survives a reinstall.</p>
+
+  <h2>What Pawmarks sends, and to whom</h2>
+  <ul>
+    <li><strong>The image boards you use</strong> (e621, Rule34): requests for post and tag data for the artists you bookmarked, using your own logged-in session, exactly as if you browsed the site. The extension identifies itself with a <code>Pawmarks/&lt;version&gt;</code> User-Agent on its own API requests and rate-limits itself.</li>
+    <li><strong>A small configuration file</strong> fetched once a day from the project's own static site (GitHub Pages). It contains only feature flags and limits. No data about you is sent with that request beyond what any web request includes.</li>
+    <li><strong>Lemon Squeezy</strong> (licence provider), only if you activate Pawmarks Plus: your licence key and a short instance name are sent to validate the key. See <a href="https://www.lemonsqueezy.com/privacy">Lemon Squeezy's privacy policy</a>.</li>
+  </ul>
+  <p>Nothing else leaves your browser. The developer never receives your bookmarks, browsing history, or any personal data.</p>
+
+  <h2>Permissions, explained</h2>
+  <ul>
+    <li><code>storage</code> — keep your bookmarks and settings.</li>
+    <li><code>downloads</code> — save posts you ask for and write the backup file (extensions can only write inside Downloads).</li>
+    <li><code>bookmarks</code> — the optional "hidden bookmark folders" feature moves a folder's bookmarks into the extension's private storage and back.</li>
+    <li><code>history</code> — the optional "hidden sites" feature removes visits to sites you choose from Chrome history.</li>
+    <li><code>alarms</code>, <code>notifications</code> — check for new uploads on a schedule and tell you.</li>
+    <li><code>declarativeNetRequest</code> — set the honest User-Agent on the extension's own requests. It is not used to read or alter any other traffic.</li>
+    <li>Host access to e621.net and rule34.xxx — add the in-page panel and read post data on those sites only.</li>
+  </ul>
+
+  <h2>Your control</h2>
+  <ul>
+    <li>Export or delete everything at any time from the extension (Export / Import / Settings).</li>
+    <li>Removing the extension deletes its storage. The backup file in your Downloads folder stays until you delete it.</li>
+    <li>Deactivating a Plus licence removes it from the browser and from the vendor's activation list.</li>
+  </ul>
+
+  <h2>Age</h2>
+  <p>The sites Pawmarks works with host adult content. Pawmarks is intended for adults only and is listed as mature content in the Chrome Web Store.</p>
+
+  <h2>Changes &amp; contact</h2>
+  <p>If this policy changes, the new version is published at this address with a new effective date. Questions: <a href="mailto:pawmarksapp@protonmail.com">pawmarksapp@protonmail.com</a> · <a href="https://github.com/Pawmarksapp">github.com/Pawmarksapp</a>.</p>
+</main>
+</body>
+</html>

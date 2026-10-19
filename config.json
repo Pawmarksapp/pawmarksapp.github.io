@@ -1,0 +1,6 @@
+{
+  "bulkDownloads": true,
+  "maxPerDay": 1500,
+  "maxPerRun": 300,
+  "message": ""
+}
