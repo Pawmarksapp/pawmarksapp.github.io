@@ -30,7 +30,7 @@
     <li>If you buy Pawmarks Plus: your licence key, its activation id and the last validation result.</li>
     <li>If you use Rule34: your Rule34 API key and user id, which the extension reads from your own account's options page while you are logged in. They are stored locally and sent only to Rule34's API.</li>
   </ul>
-  <p>All of this lives in Chrome's extension storage on your device. The optional automatic backup writes the same data to <code>Downloads\Pawmarks\backup.json</code> on your computer so it survives a reinstall.</p>
+  <p>All of this lives in Chrome's extension storage on your device. The optional automatic backup writes the same data to <code>Downloads\Pawmarks\backup.json</code> on your computer so it survives a reinstall. If you choose a Storage folder in Settings, backups are written there instead; Chrome asks your permission for that folder, and Pawmarks never reads anything else on your disk.</p>
 
   <h2>What Pawmarks sends, and to whom</h2>
   <ul>
@@ -47,7 +47,7 @@
     <li><code>bookmarks</code> — the optional "hidden bookmark folders" feature moves a folder's bookmarks into the extension's private storage and back.</li>
     <li><code>history</code> — the optional "hidden sites" feature removes visits to sites you choose from Chrome history.</li>
     <li><code>alarms</code>, <code>notifications</code> — check for new uploads on a schedule and tell you.</li>
-    <li><code>declarativeNetRequest</code> — set the honest User-Agent on the extension's own requests. It is not used to read or alter any other traffic.</li>
+    <li><code>declarativeNetRequest</code> — on the extension's own requests to e621 and Rule34 only: set the honest User-Agent, add the Referer header Rule34's image server requires, and, only if you switch it on, send Rule34's cookie-notice consent so videos can play. It is not used to read or alter any other traffic.</li>
     <li>Host access to e621.net and rule34.xxx — add the in-page panel and read post data on those sites only.</li>
   </ul>
 
